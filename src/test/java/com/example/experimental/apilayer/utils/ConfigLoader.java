@@ -1,7 +1,5 @@
 package com.example.experimental.apilayer.utils;
 
-import com.example.experimental.apilayer.utils.PropertyUtils;
-
 import java.util.Properties;
 
 public class ConfigLoader {

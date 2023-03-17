@@ -7,11 +7,10 @@ import java.util.Random;
 
 public class Helpers {
 
-    public static String getRandomKeyFromMap(Map<String, String> map){
+    public static String getRandomKeyFromMap(Map<String, String> map) {
         Random r = new Random();
         List<String> keys = new ArrayList<>(map.keySet());
         return keys.get(r.nextInt(keys.size()));
-
 
 
     }

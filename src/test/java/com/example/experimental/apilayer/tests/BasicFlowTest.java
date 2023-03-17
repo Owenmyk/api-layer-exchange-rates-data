@@ -5,21 +5,20 @@ import com.example.experimental.apilayer.dto.response.GetSymbolsResponse;
 import com.example.experimental.apilayer.utils.Helpers;
 import org.testng.annotations.Test;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
 import static com.example.experimental.apilayer.api.PathConstants.LATEST;
 import static com.example.experimental.apilayer.api.PathConstants.SYMBOLS;
 
-public class BasicFlowTest extends BaseTest{
+public class BasicFlowTest extends BaseTest {
 
     String symbol;
     Map<String, String> symbols;
 
     @Test
-    void getAvailableSymbols(){
-        GetSymbolsResponse  response = RestBase.get(apiKey, SYMBOLS)
+    void getAvailableSymbols() {
+        GetSymbolsResponse response = RestBase.get(apiKey, SYMBOLS)
                 .then()
                 .statusCode(200)
                 .extract()
@@ -31,7 +30,7 @@ public class BasicFlowTest extends BaseTest{
 
     }
 
-    @Test (dependsOnMethods = "getAvailableSymbols")
+    @Test(dependsOnMethods = "getAvailableSymbols")
     void getLatestForSingleSymbol() {
         Map<String, Object> params = new HashMap<>();
         params.put("base", symbol);
