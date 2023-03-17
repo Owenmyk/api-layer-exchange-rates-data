@@ -8,8 +8,7 @@ public abstract class BaseTest {
     protected String apiKey;
 
     @BeforeSuite
-    public void beforeSuite()
-    {
+    public void beforeSuite() {
         apiKey = ConfigLoader.getInstance().getApiKey();
     }
 }
